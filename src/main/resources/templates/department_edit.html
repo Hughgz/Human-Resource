@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/department_new.css">
+  <title>Edit Department</title>
+</head>
+
+<body>
+<div class="container">
+  <h1 style="text-align: center;">Edit Department</h1>
+  <form th:action="@{/department/edit}" method="POST" enctype="multipart/form-data">
+    <label for="">ID:</label>
+    <div class="custome-input">
+      <input type="text" name="departmentID" readonly th:value = "${currentDepartment.departmentID}">
+    </div>
+    <label for="">Name:</label>
+    <div class="custome-input">
+      <input type="text" name="name" placeholder="Enter name" th:value = "${currentDepartment.name}">
+    </div>
+    <label for="">Phone:</label>
+    <div class="custome-input">
+      <input type="text" name="phone" placeholder="Enter phone number" th:value = "${currentDepartment.phone}">
+    </div>
+    <label for="">Address</label>
+    <div class="custome-input">
+      <input type="text" name="address" placeholder="Enter address" th:value = "${currentDepartment.address}">
+    </div>
+    <label for="">Users</label>
+    <div class="custome-input">
+      <input type="text" name="userID" placeholder="Enter User" th:value = "${currentDepartment.userID}">
+    </div>
+    <button class="login" type="submit">Edit</button>
+  </form>
+</div>
+</body>
+</html>

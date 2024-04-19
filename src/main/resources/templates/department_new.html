@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/department_new.css">
+    <title>Add Department</title>
+</head>
+
+<body>
+<div class="container">
+    <h1 style="text-align: center;">Add Department</h1>
+    <form th:action="@{/department/new}" method="POST" enctype="multipart/form-data">
+        <label for="">ID:</label>
+        <div class="custome-input">
+            <input type="text" name="departmentID" readonly>
+        </div>
+        <label for="">Name:</label>
+        <div class="custome-input">
+            <input type="text" name="name" placeholder="Enter name">
+        </div>
+        <label for="">Phone:</label>
+        <div class="custome-input">
+            <input type="text" name="phone" placeholder="Enter phone number">
+        </div>
+        <label for="">Address</label>
+        <div class="custome-input">
+            <input type="text" name="address" placeholder="Enter address">
+        </div>
+        <label for="">Users</label>
+        <div class="custome-input">
+            <input type="text" name="userID" placeholder="Enter User">
+        </div>
+        <button class="login" type="submit">Add</button>
+    </form>
+</div>
+</body>
+</html>

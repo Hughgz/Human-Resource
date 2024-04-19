@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit User</title>
+  <link rel="stylesheet" href="/user_new.css">
+</head>
+<body>
+<div id="panel">
+  <h1>Edit User</h1>
+  <form th:action="@{/user/edit}" method="POST" enctype="multipart/form-data">
+    <div style="display: flex; flex-direction: row;" class="flex1">
+      <div style="flex: 1;">
+        <label for="userID">User ID:</label><br>
+        <input type="text" id="userID" name="userID" readonly th:value="${currentUser.userID}"><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" th:value = "${currentUser.name}"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" th:value = "${currentUser.email}"><br>
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" th:value = "${currentUser.phone}"><br>
+
+      </div>
+      <div style="flex: 1;">
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" th:value = "${currentUser.address}"><br>
+        <label for="birthday">Birthday:</label><br>
+        <input type="text" id="birthday" name="birthday" th:value = "${currentUser.birthday}"><br>
+        <label for="salary">Salary:</label><br>
+        <input type="number" id="salary" name="salary" th:value = "${currentUser.salary}"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" th:value = "${currentUser.username}"><br>
+
+
+      </div>
+      <div style="flex: 1;">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" th:value = "${currentUser.password}"><br>
+        <label for="managerID">Manager ID:</label><br>
+        <input type="text" id="managerID" name="managerID" th:value = "${currentUser.managerID}"><br>
+        <label for="departmentID">Department ID:</label><br>
+        <input type="text" id="departmentID" name="departmentID" th:value = "${currentUser.departmentID}"><br>
+        <label for="startDate">Start Date:</label><br>
+        <input type="text" id="startDate" name="startDate" th:value = "${currentUser.startDate}"><br>
+
+      </div>
+      <div style="flex: 1;">
+        <label for="photo">Photo:</label><br>
+        <input type="file" id="photo" name="file" accept="image/*"><br>
+        <label for="status">Status:</label><br>
+        <input type="text" id="status" name="status" th:value = "${currentUser.status}"><br>
+        <label for="contractType">Contract Type:</label><br>
+        <input type="text" id="contractType" name="contractType" th:value = "${currentUser.contractType}"><br>
+        <label for="roles">Roles:</label><br>
+        <input type="text" id="roles" name="roles" th:value = "${currentUser.roles}"><br>
+        <label for="roles">Position:</label><br>
+        <input type="text" id="position" name="position" th:value = "${currentUser.position}"><br>
+      </div>
+    </div>
+    <button type="submit">Edit user</button>
+  </form>
+</div>
+</body>
+</html>
